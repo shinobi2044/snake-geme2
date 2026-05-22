@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAKE GAME</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+
+    <!-- Efeito de linhas de monitor CRT Sci-Fi -->
+    <div class="scanlines"></div>
+
+    <div id="game-container">
+        
+        <!-- Cabeçalho Técnico -->
+        <header class="hud-header">
+            <span class="system-status">JOGO FUNCIONANDO</span>
+            <span class="system-version"><V class="1"></V></span>
+        </header>
+
+        <!-- Título Principal -->
+        <h1 class="glitch-title">SNAKE GAME</h1>
+        <p class="subtitle">TENTE COMER ALGUMAS MAÇÃS...</p>
+
+        <!-- Painel de Pontuação -->
+        <div class="score-board">
+            <span class="label">VELOCIDADE</span>
+            <span id="score">SUPER RÁPIDA</span>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div class="canvas-wrapper">
+            <canvas id="snakeGame" width="400" height="400"></canvas>
+        </div>
+
+        <!-- Instruções -->
+        <div class="controls">
+            <span class="blink-dot"></span> USE AS SETAS PARA SE MOVER
+        </div>
+
+        <!-- Tela de Game Over (Aparece ao morrer) -->
+        <div class="game-over" id="overlay">
+            <h1>VOCÊ MORREU</h1>
+            <p>TENTE MAIS UMA VEZ, SE TIVER CORAGEM...</p>
+            <div class="final-score">sua pontuação: <span id="final-score-val">000</span></div>
+            <!-- Botão de Reset que recarrega a página -->
+            <button id="resetBtn" onclick="location.reload()">Denovo?</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
